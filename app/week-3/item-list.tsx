@@ -72,10 +72,9 @@ const ItemList = () => {
         quantity: 4,
         category: "household",
     };
-    
+
     return (
-        <ul className="bg-neutral-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs hover:bg-neutral-secondary-medium">
-            <Item {...item1}/>
+        <ol className="w-full max-w-sm">
             <Item {...item2}/>
             <Item {...item3}/>
             <Item {...item4}/>
@@ -87,7 +86,7 @@ const ItemList = () => {
             <Item {...item10}/>
             <Item {...item11}/>
             <Item {...item12}/>
-        </ul>
+        </ol>
     )
 }
 

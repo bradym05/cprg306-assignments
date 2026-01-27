@@ -3,8 +3,12 @@ import ItemList from "./item-list";
 export default function Page() {
     return (
         <main>
-            <h1>Shopping List</h1>
-            <ItemList/>
+            <div className="flex flex-col items-center justify-center m-8">
+                <h1 className="mb-2 text-lg font-medium text-heading">
+                    Shopping List
+                </h1>
+                <ItemList />
+            </div>
         </main>
     );
 }
