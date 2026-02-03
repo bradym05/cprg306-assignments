@@ -52,16 +52,18 @@ const NewItem = () => {
                     type="text"
                     className={
                         `w-full text-gray-800 text-center bg-gray-300 p-2 rounded-xl 
-                        ${nameTouched && name == "" ? "border-red-500 border-2" : ""}`
+                        ${nameTouched && (name == "" || name.length < 2) ? "border-red-500 border-2" : ""}`
                     }
                     value={name}
                     onChange={({ target }) => setName(target.value)}
                     required
-                    onBlur={() => {setNameTouched(true)}}
+                    onBlur={() => { setNameTouched(true) }}
                 />
-                {nameTouched && name == "" && (
+                {nameTouched && (name == "" && (
                     <p className="w-full text-gray-800 text-center p-2 rounded-xl text-red-500">Name cannot be empty</p>
-                )}
+                ) || name.length < 2 && (
+                    <p className="w-full text-gray-800 text-center p-2 rounded-xl text-red-500">Name cannot be less than 2 characters</p>
+                ))}
             </div>
 
 
@@ -103,9 +105,9 @@ const NewItem = () => {
                     type="submit"
                     className={
                         `   p-3 m-4 bg-gray-300 rounded-2xl shadow-xs font-semibold 
-                        ${name == "" ? "bg-gray-600 text-gray-500" : "bg-gray-300 hover:text-gray-800 hover:bg-white text-gray-600"}`
+                        ${name == "" || name.length < 2 ? "bg-gray-600 text-gray-500" : "bg-gray-300 hover:text-gray-800 hover:bg-white text-gray-600"}`
                     }
-                    disabled={name==""}
+                    disabled={name == "" || name.length < 2}
                 >
                     Submit
                 </button>
