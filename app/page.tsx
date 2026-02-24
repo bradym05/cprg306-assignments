@@ -26,6 +26,11 @@ export default function Home() {
               Week 5
             </a>
           </li>
+          <li className="hover:bg-white text-gray-600 hover:text-gray-800 p-3 m-4 bg-gray-300 rounded-2xl shadow-xs text-black font-semibold">
+            <a href="./week-6">
+              Week 6
+            </a>
+          </li>
         </ol>
       </div>
     </div>
