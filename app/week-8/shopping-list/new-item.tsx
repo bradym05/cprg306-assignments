@@ -1,7 +1,7 @@
 "use client";
 
 import { ChangeEvent, Dispatch, FormEvent, SetStateAction, useState } from "react";
-import Item from "../week-3/item";
+import Item from "@/app/week-3/item";
 import { ShoppingItem } from "./types";
 
 type NewItemProps = {
